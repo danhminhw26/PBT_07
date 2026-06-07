@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Game: Đoán Số</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background: white;
+        width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .info {
+        background: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+        font-size: 16px;
+        color: #555;
+      }
+      .rules {
+        text-align: left;
+        background: #fffbe6;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+        font-size: 14px;
+        color: #666;
+      }
+      .rules li {
+        margin: 5px 0;
+      }
+      button {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #764ba2;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #667eea;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1> Mini Game: Đoán Số</h1>
+
+      <div class="info">
+        <p>Máy sẽ random một số từ 1 đến 100</p>
+        <p>Bạn có <strong>7 lần</strong> để đoán đúng</p>
+      </div>
+
+      <div class="rules">
+        <strong>Luật chơi:</strong>
+        <ul>
+          <li>Nhập một số từ 1-100</li>
+          <li>Máy sẽ cho biết số đó cao hay thấp</li>
+          <li>Nếu đoán lặp lại sẽ bị cảnh báo</li>
+          <li>Đoán đúng hoặc hết 7 lần là kết thúc</li>
+        </ul>
+      </div>
+
+      <button onclick="startGame()">Bắt Đầu Chơi</button>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script src="guess.js"></script>
+  </body>
+</html>
